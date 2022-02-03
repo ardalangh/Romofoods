@@ -6,9 +6,7 @@ function ProductModel(props) {
 
 
 
-	return (
 
-	);
 }
 
 export default ProductModel;
