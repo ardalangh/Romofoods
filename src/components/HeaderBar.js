@@ -46,8 +46,8 @@ const HeaderBar = () => {
 					display: 'flex',
 					flexDirection: 'column',
 					justifyContent: 'center',
-					padding: '0 5%',
-					background: `url(${logo}) scroll right bottom no-repeat`,
+					padding: '0 2%',
+					width: '20vh',
 
 				}}
 			>
@@ -62,7 +62,9 @@ const HeaderBar = () => {
 						margin: '0%',
 						letterSpacing: '0.2rem',
 						fontWeight: 'bolder',
-					}}>ROMO FOODS</Typography>
+					}}>
+						ROMOFOODS
+					</Typography>
 					<HorizontalRuleOutlinedIcon sx={{display: 'inline-block'}}/>
 				</Box>
 
@@ -83,65 +85,3 @@ const HeaderBar = () => {
 	);
 };
 export default HeaderBar;
-
-{/*<Toolbar disableGutters>*/
-}
-{/*	<Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'flex', justifyContent: 'center'}}}>*/
-}
-{/*		<Button*/
-}
-{/*			onClick={handleCloseNavMenu}*/
-}
-{/*			sx={{my: 2, color: '#598525', display: 'block'}}*/
-}
-{/*		>*/
-}
-{/*			{'page'}*/
-}
-{/*		</Button>*/
-}
-{/*		<Button*/
-}
-{/*			onClick={handleCloseNavMenu}*/
-}
-{/*			sx={{my: 2, color: '#598525', display: 'block'}}*/
-}
-{/*		>*/
-}
-{/*			{'page'}*/
-}
-{/*		</Button>*/
-}
-
-{/*		<img src={logo} width="100px"/>*/
-}
-{/*			<*/
-}
-{/*				Button*/
-}
-{/*				onClick={handleCloseNavMenu}*/
-}
-{/*				sx={{my: 2, color: '#598525', display: 'block'}}*/
-}
-{/*			>*/
-}
-{/*				{'page'}*/
-}
-{/*			</Button>*/
-}
-{/*			<Button*/
-}
-{/*				onClick={handleCloseNavMenu}*/
-}
-{/*				sx={{my: 2, color: '#598525', display: 'block'}}*/
-}
-{/*			>*/
-}
-{/*				{'page'}*/
-}
-{/*			</Button>*/
-}
-{/*	</Box>*/
-}
-{/*</Toolbar>*/
-}
