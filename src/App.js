@@ -4,6 +4,8 @@ import {Route, Routes} from 'react-router-dom';
 import HeaderBar from './components/HeaderBar';
 import Box from '@mui/material/Box';
 import MainPage from './pages/MainPage';
+import ProductPage from "./pages/ProductPage";
+import React from "react";
 
 
 function App() {
@@ -18,7 +20,10 @@ function App() {
         >
             <Routes>
                 <Route path="/" element={<MainPage/>} />
+                <Route path="/productPage" element={ <ProductPage/>} />
             </Routes>
+
+
 
         </Box>
     );
