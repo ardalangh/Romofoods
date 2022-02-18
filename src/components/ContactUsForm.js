@@ -2,24 +2,38 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import DetailPageTypography from "./DetailPageTypography";
+import IconButton from "@mui/material/IconButton";
+import BungalowIcon from "@mui/icons-material/Bungalow";
+import {Link} from "react-router-dom";
 
 export default function ContactUsForm() {
     const [value, setValue] = React.useState();
     const [name, setName] = React.useState();
     const [LastName, setLastName] = React.useState();
     const [email, setEmail] = React.useState();
-    const [number  , setNumber] = React.useState();
+    const [number, setNumber] = React.useState();
     const handleChange = (event) => {
         setValue(event.target.value);
     };
 
     return (
         <>
-            <Box sx = {{
-                display : 'flex',
+            <Box sx={{
+                display: 'flex',
 
             }}>
                 <Box>
+                    <Link to='/'>
+                        <IconButton aria-label="home"
+                                    sx={{
+                                        border: "1px solid white"
+                                    }}>
+                            ç
+                            <BungalowIcon fontSize={'large'} sx={{
+                                color: 'white',
+                            }}/>
+                        </IconButton>
+                    </Link>
 
                     <DetailPageTypography>
                         info@romofoods.com
@@ -31,7 +45,6 @@ export default function ContactUsForm() {
                     <DetailPageTypography>
                         Manufactured at: Concord, CA 94520 - U.S.A.
                     </DetailPageTypography>
-
 
                 </Box>
                 <Box
