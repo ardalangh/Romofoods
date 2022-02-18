@@ -6,6 +6,7 @@ import Box from '@mui/material/Box';
 import MainPage from './pages/MainPage';
 import ProductPage from "./pages/ProductPage";
 import React from "react";
+import ContactUS from "./pages/ContactUS";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<MainPage/>} />
                 <Route path="/productPage" element={ <ProductPage/>} />
+                <Route path="/contactUs" element = {<ContactUS/>}></Route>
             </Routes>
 
 
