@@ -3,30 +3,14 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import HorizontalRuleOutlinedIcon from '@mui/icons-material/HorizontalRuleOutlined';
-import {Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ['nutrients', 'locations','productPage', 'contactUs'];
 
 const HeaderBar = () => {
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
+    const navigate = useNavigate()
 
-    const handleOpenNavMenu = (event) => {
-        setAnchorElNav(event.currentTarget);
-    };
-    const handleOpenUserMenu = (event) => {
-        setAnchorElUser(event.currentTarget);
-    };
-
-    const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
-    };
-
-    const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
-    };
 
     return (
 
@@ -57,28 +41,37 @@ const HeaderBar = () => {
                 <HorizontalRuleOutlinedIcon sx={{display: 'inline-block'}}/>
             </Box>
 
-            <Link to="/contactUs">
 
-                <Button>
-                    <Typography sx={{fontFamily: 'Space Mono, monospace', color: '#8e8e8e'}}>Contact us</Typography>
+            {pages.map(page =>
+
+                <Button onClick={() => navigate(`/${page}`)}>
+                    <Typography sx={{fontFamily: 'Space Mono, monospace', color: '#8e8e8e'}}>{page}</Typography>
                 </Button>
 
-            </Link>
-            <Button>
-                <Typography sx={{fontFamily: 'Space Mono, monospace', color: '#8e8e8e'}}>Locations</Typography>
-            </Button>
-            <Button>
-                <Typography sx={{fontFamily: 'Space Mono, monospace', color: '#8e8e8e'}}>Nutrients</Typography>
-            </Button>
+            )}
 
 
-            <Link
-                to="/productPage"
-            >
-                <Button>
-                    <Typography sx={{fontFamily: 'Space Mono, monospace', color: '#8e8e8e'}}>Product Detail</Typography>
-                </Button>
-            </Link>
+            {/*<Link to = "/locations" style = {{textDecoration : 'none'}}>*/}
+
+            {/*    <Button>*/}
+            {/*        <Typography sx={{fontFamily: 'Space Mono, monospace', color: '#8e8e8e'}}>Locations</Typography>*/}
+            {/*    </Button>*/}
+
+            {/*</Link>*/}
+
+            {/*<Button>*/}
+            {/*    <Typography sx={{fontFamily: 'Space Mono, monospace', color: '#8e8e8e'}}>Nutrients</Typography>*/}
+            {/*</Button>*/}
+
+
+            {/*<Link*/}
+            {/*    to="/productPage" style = {{textDecoration : 'none' }}*/}
+            {/*>*/}
+            {/*    <Button>*/}
+            {/*        <Typography sx={{fontFamily: 'Space Mono, monospace', color: '#8e8e8e'}}>Product Detail</Typography>*/}
+            {/*    </Button>*/}
+            {/*</Link>*/}
+
 
         </Box>
 
